@@ -69,11 +69,114 @@ body {
   background: var(--white);
   height: max-content;
   padding: 2.5rem 1.875rem;
+  color: var(--wengeBrown);
 }
 
-.card__main-title {
+/*RECIPE PRESENTATION*/
+
+.recipe__description {
+  display: flex;
+  flex-direction: column;
+  gap: 1.875rem;
+}
+
+.description__title {
   color: black;
-  letter-spacing: -0.0625rem;
+  font-size: 2rem;
+  letter-spacing: -0.125rem;
+  @media (min-width: 23.4375rem) {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
+}
+
+.description__paragraph {
+  line-height: 1.375rem;
+}
+
+/* RECIPE PREPARATION TIME */
+
+.recipe__preparation {
+  min-height: 12.25rem;
+  background: var(--roseWhite);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  justify-content: space-between;
+}
+
+.preparation__title {
+  font-size: 1.25rem;
+  color: var(--darkRaspberry);
+}
+
+.preparation__times,
+.ingredients__items,
+.instructions__steps {
+  font-size: 0.875rem;
+  width: 78%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 1.5625rem;
+  gap: 1.125rem;
+  line-height: 1.25rem;
+}
+
+.preparation__times > li,
+.ingredients__items > li,
+.instructions__steps > li {
+  padding-left: 1.125rem;
+}
+
+/*  RECIPE INGREDIENTS  */
+
+.recipe__ingredients,
+.recipe__instructions,
+.recipe__nutrition-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.ingredients__title,
+.instructions__title,
+.nutrition__title {
+  font-size: 1.75rem;
+}
+
+/*   RECIPE INSTRUCTIONS */
+
+.instructions__steps {
+  list-style-type: decimal;
+}
+
+.instructions__steps {
+  width: 90%;
+}
+
+/*  RECIPE NUTRITION INFORMATION  */
+
+.nutrition__description {
+  width: 83%;
+  text-align: left;
+  font-size: .875rem;
+}
+
+.nutrition__details-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.125rem;
+}
+
+.nutrition__details {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.nutrition__details > p {
+  width: 3.625rem;
 }
 
 /*  FOOTER  */
@@ -81,6 +184,7 @@ body {
 .attribution {
   font-size: 0.6875rem;
   text-align: center;
+  
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
